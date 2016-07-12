@@ -1,10 +1,17 @@
 @import "node_modules/inuit-defaults/settings.defaults";
+@import "node_modules/inuit-responsive-settings/settings.responsive";
 
 @import "node_modules/inuit-functions/tools.functions";
 @import "node_modules/inuit-mixins/tools.mixins";
+@import "node_modules/inuit-responsive-tools/tools.responsive";
+@import "node_modules/inuit-tools-widths/tools.widths";
 
 @import "node_modules/inuit-normalize/generic.normalize";
 @import "node_modules/inuit-box-sizing/generic.box-sizing";
 
 @import "node_modules/inuit-page/base.page";
-@import "src/sass/generic/landingpage"
+@import "src/sass/generic/landingpage";
+@import "node_modules/inuit-responsive-widths/trumps.widths-responsive";
+@import "node_modules/inuit-responsive-spacing/trumps.spacing-responsive";
+
+@include inuit-widths(12);
