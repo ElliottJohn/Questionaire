@@ -1,4 +1,22 @@
-.body-text {
-	color:  red;
+.header {
+	color: white;
+	font-size: 200%;
 	font-weight: bold;
+	text-align: left;
+	margin-top: 0;
+	padding-left: $inuit-padding;
+	background-color: grey;
+}
+
+.questions {
+	//color:  red;
+	margin-top: $inuit-margin;
+	padding: $inuit-padding;
+	text-align: center;
+	//border-style: solid;
+	//border-width: 2px;
+}
+
+.gradient {
+	background: radial-gradient(#e6e6e6 10%, #d9e6f2 30%, #cce6ff 60%);
 }
