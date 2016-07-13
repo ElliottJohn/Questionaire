@@ -2,15 +2,24 @@
 	color: white;
 	font-size: 200%;
 	font-weight: bold;
+	height: 100px;
 	text-align: left;
-	margin-top: 0;
+	margin: auto;
 	padding-left: $inuit-padding;
 	background-color: grey;
+	line-height: 100px;
 }
 
+.header_img {
+    float: right;
+  	width: 200px;
+  	height: 75px;
+    margin-top: halve($inuit-margin);
+  	margin-right: $inuit-margin;
+  }
+
 .questions {
-	//color:  red;
-	margin-top: $inuit-margin;
+	margin: $inuit-margin;
 	padding: $inuit-padding;
 	text-align: center;
 	//border-style: solid;
@@ -18,5 +27,18 @@
 }
 
 .gradient {
-	background: radial-gradient(#e6e6e6 10%, #d9e6f2 30%, #cce6ff 60%);
+	background: radial-gradient(#e6e6e6 20%, #d9e6f2 30%, #cce6ff 50%);
+}
+
+.nextBtn {
+	float: right;
+}
+
+.backBtn {
+	display: inline-block;
+	text-align: right;
+}
+
+.checkBox {
+	position: relative;
 }

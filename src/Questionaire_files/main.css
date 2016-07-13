@@ -904,7 +904,9 @@ html {
   text-align: right; }
 
 .checkBox {
-  position: relative; }
+  border-style: solid;
+  border-width: 2px;
+  float: center; }
 
 .fontQuestion {
   font-size: 30px;
