@@ -1,55 +1,29 @@
-<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+
 <html class="gradient" lang=en>
 	<head>
 		<title>Questionaire</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
 	</head>
-	<body>
-		<img class="header_img" src="src/assets/images/cohaesus.png" alt="logo" />
-		<h1 class="header"> Questionaire</h1>
+		<header>
+		</header>
 
-    		<div class="questions">
-    			<label class="fontQuestion">Do you like tea?</label><br />
-    				<div class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">Yes</label><br />
-			    	</div>
-					<div 	class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">No</label>
-					</div>
-			</div>		
+		<section>
+		</section>
 
-			<div class="questions">
-    			<label class="fontQuestion">Do you like tea?</label><br />
-    				<div class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">Yes</label><br />
-			    	</div>
-					<div 	class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">No</label>
-					</div>
-			</div>		
-
-			<div class="questions">
-    			<label class="fontQuestion">Do you like tea?</label><br />
-    				<div class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">Yes</label><br />
-			    	</div>
-					<div 	class="checkBox">
-						<input type="checkbox" />
-						<label class="fontAnswer">No</label>
-					</div>
-			</div>	
-
-			<div class="u-3/12 backBtn" >
-			<input type="submit" value="Back"> 
-			</div>
-
-			<div class="u-3/12 nextBtn">
-			<input type="submit" value="Next"> 
-			</div>
-	</body>
-</html>
+  	<script id="text-template" type="text/x-handlebars-template">
+    	<form>
+   			{{#each question}}
+   			<div class="questions">
+   				<label>{{label}}</label>
+        		<input type="{{type}}">
+    		</div>
+    		{{/each}}
+    	</form>
+  	</script>
+ 	
+ 	<img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
+	<h1 class="header" id="title"></h1>
+	<div id="text"></div>
+ 
+<script src="dist/jQuery/ajax_handlebars.js"></script>

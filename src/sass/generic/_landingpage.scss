@@ -18,6 +18,7 @@
   	margin-right: $inuit-margin;
   }
 
+
 .questions {
 	margin: $inuit-margin;
 	padding: $inuit-padding;
@@ -30,15 +31,22 @@
 	background: radial-gradient(#e6e6e6 20%, #d9e6f2 30%, #cce6ff 50%);
 }
 
-.nextBtn {
+// Look for some mixins for gradients, also think about using variables perhaps
+
+.next_btn {
 	float: right;
 }
 
-.backBtn {
+.back_btn {
 	display: inline-block;
 	text-align: right;
 }
 
 .checkBox {
 	position: relative;
+}
+
+.my-new-list {
+		text-align: center;
+
 }

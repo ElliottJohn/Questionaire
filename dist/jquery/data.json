@@ -1,0 +1,17 @@
+{
+   "title" : "Questionaire",
+   "question" : [
+       {
+          "type" : "checkbox",
+          "label"   : "Yes"
+       },
+       {
+          "type" : "text",
+          "label"   : "Name"
+       },
+       {  "type" : "submit",
+          "label" : "next"
+        }
+
+   ]
+}

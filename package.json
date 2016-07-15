@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "handlebars": "^4.0.5",
     "inuit-buttons": "^0.4.2",
     "inuit-headings": "^0.3.1",
     "inuit-layout": "^0.2.2",

@@ -1,0 +1,24 @@
+Project
+ - dist
+ 	- index.html
+ 	- assets
+ 		- css
+ 		- js
+ 			- app.js
+ - src
+ 	assets
+ 		-sass
+ 		-data
+ 			json
+ 		-js
+ 			accorodion.js
+ 			question.js
+
+ 		-lib
+ 			- jquery
+ 		-html
+ 			-partials
+ 			-layouts
+ Gulpps
+ package
+ readm4e
