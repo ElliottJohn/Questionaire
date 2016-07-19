@@ -1,17 +1,43 @@
-{
+{ 
    "title" : "Questionaire",
-   "question" : [
+   "question" : [ 
        {
-          "type" : "checkbox",
-          "label"   : "Yes"
-       },
-       {
-          "type" : "text",
-          "label"   : "Name"
-       },
-       {  "type" : "submit",
-          "label" : "next"
+          "name" : "q1",
+          "label" : "Do you like tea?",
+          "options" : [
+            {
+              "type" : "checkbox",
+              "value" : "yes",
+              "label" : "yes"
+            },
+            {
+              "type" : "checkbox",
+              "value" : "no",
+              "label" : "no"
+            },
+            {
+              "type" : "text",
+              "value" : "no",
+              "label" : "no"
+            }
+         ]
+        },
+        {
+          "name" : "q2",
+          "label" : "Do you like cofee?",
+          "options" : [
+            {
+              "type" : "checkbox",
+              "value" : "yes",
+              "label" : "yes"
+            },
+            {
+              "type" : "checkbox",
+              "value" : "no",
+              "label" : "no"
+            }
+            ]
         }
-
-   ]
+  ]
+   
 }

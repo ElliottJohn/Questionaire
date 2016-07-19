@@ -15,13 +15,14 @@
     	<form>
    			{{#each question}}
    			<div class="questions">
-   				<label>{{label}}</label>
-        		<input type="{{type}}">
+   				<label>{{label}}</label><br>
+   					{{#each options}}
+   					<input type={{type}} value="{{value}}">{{label}}<br>
+   					{{/each}}
     		</div>
     		{{/each}}
     	</form>
-  	</script>
- 	
+  	</script>	
  	<img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
 	<h1 class="header" id="title"></h1>
 	<div id="text"></div>
