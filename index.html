@@ -1,30 +1,58 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+<script src="dist/jQuery/ajax_handlebars.js"></script>
 
 <html class="gradient" lang=en>
-	<head>
-		<title>Questionaire</title>
-		<link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
-	</head>
-		<header>
-		</header>
+  	<head>
+  		<title>Questionaire</title>
+  	   <link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
+      </head>
 
-		<section>
-		</section>
+  	<header>
+      <img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
+      <h1 class="header" id="title"></h1>
+  	</header>
 
-  	<script id="text-template" type="text/x-handlebars-template">
-    	<form>
-   			{{#each question}}
-   			<div class="questions">
-   				<label>{{label}}</label><br>
-   					{{#each options}}
-   					<input type={{type}} value="{{value}}">{{label}}<br>
-   					{{/each}}
-    		</div>
-    		{{/each}}
-    	</form>
-  	</script>	
- 	<img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
-	<h1 class="header" id="title"></h1>
-	<div id="text"></div>
- 
-<script src="dist/jQuery/ajax_handlebars.js"></script>
+  	<section>	
+  	</section>
+
+    <script type="text/javascript">
+
+        function saveAnswers()
+        {
+          if(document.getElementById("Q1Y").checked)
+          {
+            localStorage.Answer = document.getElementById("Q1Y").value;
+          }
+          else if(document.getElementById("Q1N").checked)
+          {
+            localStorage.Answer = document.getElementById("Q1N").value;
+          }
+        }
+
+        function loadAnswers()
+        { 
+            document.write({{num_Questions}});
+        }
+
+    </script>
+
+    <body>
+        <script id="text-template" type="text/x-handlebars-template">
+            <form>
+              	{{#each question}}
+                    <div class="questions">
+                      	<label>{{label}}</label><br>
+                      	{{#each options}}
+                      	   <input type={{type}} id={{id}} value="{{value}}" name="{{name}}">{{label}}<br>
+                      	{{/each}}
+                  	</div>
+              	{{/each}}
+          	</form>
+        </script>	
+        <div id="text"></div>
+        <input type="button" value="Next" onClick="javascript:saveAnswers();" />
+        <input type="button" value="Next" onClick="javascript:loadAnswers();" />
+
+    </body>
+
+</html>
