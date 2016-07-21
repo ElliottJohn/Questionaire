@@ -17,9 +17,6 @@
 
     <script type="text/javascript">
 
-var session = {
-  'SubmittedAnswers': []
-};
         function loadAnswers()
         { 
             document.write(localStorage.session);
@@ -29,21 +26,15 @@ var session = {
 
     <body>
         <script id="text-template" type="text/x-handlebars-template">
-            <form id="questionsForm" value="{{num_Questions}}">
               	{{#each question}}
                     <div class="questions">
                       	<label>{{label}}</label><br>
-                      	{{#each options}}
-                      	   <input type={{type}} id={{id}} value="{{value}}" name="{{name}}" onClick="session.SubmittedAnswers.push({ 'Question': '{{name}}', 'answer': '{{value}}'});">{{label}}<br>
-                      	{{/each}}
+                      	<p> Your answer was {{answer}}
                   	</div>
               	{{/each}}
           	</form>
         </script>	
         <div id="text"></div>
-        <input type="button" value="Next" onClick="localStorage.setItem('session', JSON.stringify(session));" />
-        <input type="button" value="Submit" onClick="javascript:loadAnswers();" />
-
     </body>
 
 </html>
