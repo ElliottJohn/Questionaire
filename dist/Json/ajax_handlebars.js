@@ -26,3 +26,4 @@ ajax_get('data.json', function(data) {
  
     document.getElementById("text").innerHTML = html;
 });
+

@@ -1,60 +1,115 @@
 { 
    "title" : "Questionaire",
-   "num_Questions" : "10",
    "question" : [ 
        {
-          "name" : "Q1",
+          "name" : "1",
           "label" : "Do you like tea?",
           "answer" : "yes",
           "options" : [
             {
               "type" : "radio",
               "value" : "yes",
-              "label" : "yes",
+              "label" : "Yes",
               "id" : "Q1Yes",
-              "name" : "Q1"
+              "name" : "1"  
             },
             {
               "type" : "radio",
               "value" : "no",
-              "label" : "no",
+              "label" : "No",
               "id" : "Q1No",
-              "name" : "Q1"
+              "name" : "1"
             },
             {
               "type" : "radio",
               "value" : "Other",
               "label" : "Other",
               "id" : "Q1Other",
-              "name" : "Q1"
+              "name" : "1"
             }
          ]
         },
         {
-          "name" : "q2",
+          "name" : "2",
           "label" : "Do you like cofee?",
           "answer" : "no",
           "options" : [
                  {
               "type" : "radio",
               "value" : "yes",
-              "label" : "yes",
+              "label" : "Yes",
               "id" : "Q2Yes",
-              "name" : "Q2"
+              "name" : "2"
             },
             {
               "type" : "radio",
               "value" : "no",
-              "label" : "no",
+              "label" : "No",
               "id" : "Q2No",
-              "name" : "Q2"
+              "name" : "2"
             },
             {
               "type" : "radio",
               "value" : "Other",
               "label" : "Other",
               "id" : "Q2Other",
-              "name" : "Q2"
+              "name" : "2"
+            }
+          ]
+        },
+        {
+          "name" : "3",
+          "label" : "Do you like Cola?",
+          "answer" : "no",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q3Yes",
+              "name" : "3"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q3No",
+              "name" : "3"
+            },
+            {
+              "type" : "radio",
+              "value" : "Other",
+              "label" : "Other",
+              "id" : "Q3Other",
+              "name" : "3"
+            }
+          ]
+        },
+        {
+          "name" : "4",
+          "label" : "Do you like Fanta?",
+          "answer" : "no",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q4Yes",
+              "name" : "4"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q4No",
+              "name" : "4"
+            },
+            {
+              "type" : "radio",
+              "value" : "Other",
+              "label" : "Other",
+              "id" : "Q4Other",
+              "name" : "4"
             }
           ]
         }

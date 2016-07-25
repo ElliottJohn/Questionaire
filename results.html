@@ -1,5 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
-<script src="dist/jQuery/ajax_handlebars.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 
 <html class="gradient" lang=en>
   	<head>
@@ -15,26 +16,25 @@
   	<section>	
   	</section>
 
-    <script type="text/javascript">
-
-        function loadAnswers()
-        { 
-            document.write(localStorage.session);
-        }
-
-    </script>
-
+<!-- 1. Get the local storage value in js  -->
+<!-- 2. Get the div class/id in js -->
+<!-- 3. Append results to div in js -->
+ 
     <body>
-        <script id="text-template" type="text/x-handlebars-template">
-              	{{#each question}}
-                    <div class="questions">
-                      	<label>{{label}}</label><br>
-                      	<p> Your answer was {{answer}}
-                  	</div>
-              	{{/each}}
-          	</form>
-        </script>	
-        <div id="text"></div>
+      <!-- TODO add a ul with specific class/id -->
+        <ul id="answers"></ul>
     </body>
+    
+<script type="text/javascript">
+
+            var retrievedAnswers = localStorage.getItem('session');
+            var UserAnswers = JSON.parse(retrievedAnswers);
+            var results = document.getElementById('answers');
+            for (i=0; i < 4; i++)
+            {
+            $("ul").append("Your answer was: " + UserAnswers.SubmittedAnswers[i]+ "</br>");
+          }
+      
+</script>
 
 </html>

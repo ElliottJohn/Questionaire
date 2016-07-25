@@ -1,49 +1,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
-<script src="dist/jQuery/ajax_handlebars.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <html class="gradient" lang=en>
-  	<head>
-  		<title>Questionaire</title>
-  	   <link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
-      </head>
+    <head>
+        <title>Questionaire</title>
+        <link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
+        <script type="text/javascript">
 
-  	<header>
-      <img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
-      <h1 class="header" id="title"></h1>
-  	</header>
+            var session = {
+              'SubmittedAnswers': []
+            };
+            function loadAnswers()
+            { 
+                document.write(localStorage.session);
+            }
 
-  	<section>	
-  	</section>
+            function btntest_onclick() 
+            {
+                window.location.href = "results.html";
+            }
 
-    <script type="text/javascript">
 
-var session = {
-  'SubmittedAnswers': []
-};
-        function loadAnswers()
-        { 
-            document.write(localStorage.session);
-        }
 
-    </script>
+            $.getJSON('/dist/jquery/data.json', function(data) 
+            {
+                console.log(data.num_questions);
 
+                for (i=0; i < data.question.length; i++)
+                {
+                    var questions = "<p>" + data.question[i].label + "</p>";
+                    var options = {'options': []};
+                    for (n=0; n < data.question[i].options.length; n++)
+                    { 
+                       options.options[n] = "<input type=" + data.question[i].options[n].type +" name=" + data.question[i].options[n].name + " id=" + data.question[i].options[n].type + "onClick='session.SubmittedAnswers.push({ 'Question': data.question[i].options[n].name, 'answer': data.question[i].options[n].value);'>" + data.question[i].options[n].label;
+                    }
+                    $("form").append(questions, options.options );     // Append new elements
+                }
+            });
+
+        </script>
+
+    </head>
     <body>
-        <script id="text-template" type="text/x-handlebars-template">
-            <form id="questionsForm" value="{{num_Questions}}">
-              	{{#each question}}
-                    <div class="questions">
-                      	<label>{{label}}</label><br>
-                      	{{#each options}}
-                      	   <input type={{type}} id={{id}} value="{{value}}" name="{{name}}" onClick="session.SubmittedAnswers.push({ 'Question': '{{name}}', 'answer': '{{value}}'});">{{label}}<br>
-                      	{{/each}}
-                  	</div>
-              	{{/each}}
-          	</form>
-        </script>	
-        <div id="text"></div>
-        <input type="button" value="Next" onClick="localStorage.setItem('session', JSON.stringify(session));" />
+        <header>
+            <img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
+            <h1 class="header" id="title"></h1>
+        </header>
+
+        <section>   
+        </section>
+
+        <form>
+<input type="button" value="Next" onClick="localStorage.setItem('session', JSON.stringify(session));" />
         <input type="button" value="Submit" onClick="javascript:loadAnswers();" />
 
+        </form>
     </body>
+
 
 </html>
