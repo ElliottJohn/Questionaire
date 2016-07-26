@@ -14,7 +14,7 @@
     float: right;
   	width: 200px;
   	height: 75px;
-    margin-top: halve($inuit-margin);
+    margin-top: $inuit-margin--small;
   	margin-right: $inuit-margin;
   }
 
@@ -23,6 +23,8 @@
 	margin: $inuit-margin;
 	padding: $inuit-padding;
 	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
 	//border-style: solid;
 	//border-width: 2px;
 }
@@ -31,10 +33,15 @@
 	background: radial-gradient(#e6e6e6 20%, #d9e6f2 30%, #cce6ff 50%);
 }
 
-// Look for some mixins for gradients, also think about using variables perhaps
 
-.next_btn {
-	float: right;
+.radio_btn {
+	float: middle;
+	margin: $inuit-margin;
+	margin-right: halve($inuit-margin);
+  	margin-left: double($inuit-margin);
+
+
+
 }
 
 .back_btn {

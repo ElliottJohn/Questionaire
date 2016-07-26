@@ -27,13 +27,38 @@
     
 <script type="text/javascript">
 
-            var retrievedAnswers = localStorage.getItem('session');
+      /*      var retrievedAnswers = localStorage.getItem('session');
             var UserAnswers = JSON.parse(retrievedAnswers);
             var results = document.getElementById('answers');
             for (i=0; i < 4; i++)
             {
-            $("ul").append("Your answer was: " + UserAnswers.SubmittedAnswers[i]+ "</br>");
-          }
+            $("ul").append("Your answer was: " + UserAnswers.SubmittedAnswers[i].answer+ "</br>");
+            }
+            console.log(UserAnswers); */
+
+
+            $(function() 
+            {
+              var retrievedAnswers = localStorage.getItem('session');
+              var UserAnswers = JSON.parse(retrievedAnswers);
+
+                $.getJSON('/dist/jquery/data.json', function(data) 
+                {
+                    for (i=0; i < data.question.length; i++)
+                    {
+                        var questions = "<p>" + data.question[i].label + "</p>";
+                        $("ul").append(questions);   
+
+                        var answer = "<p> Your answer was '" + UserAnswers.SubmittedAnswers[i].answer + "' the correct answer was '" + data.question[i].answer + "'. </p>";
+                        $("ul").append(answer);   
+
+                        $("p").addClass("questions");
+
+                    }
+                    
+                });
+
+            });
       
 </script>
 
