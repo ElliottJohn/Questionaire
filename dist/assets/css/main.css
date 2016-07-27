@@ -935,7 +935,8 @@ html {
     border-width: 2px; }
 
 .gradient {
-  background: radial-gradient(#e6e6e6 20%, #d9e6f2 30%, #cce6ff 50%); }
+  background: radial-gradient(#e6e6e6 20%, #d9e6f2 30%, #cce6ff 50%);
+  background-attachment: fixed; }
 
 .radio_btn {
   margin: 24px;
