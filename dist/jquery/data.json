@@ -21,9 +21,9 @@
             },
             {
               "type" : "radio",
-              "value" : "Other",
-              "label" : "Other",
-              "id" : "Q1Other",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q1Not sure",
               "name" : "1"
             }
          ]
@@ -49,9 +49,9 @@
             },
             {
               "type" : "radio",
-              "value" : "Other",
-              "label" : "Other",
-              "id" : "Q2Other",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q2Not sure",
               "name" : "2"
             }
           ]
@@ -77,9 +77,9 @@
             },
             {
               "type" : "radio",
-              "value" : "Other",
-              "label" : "Other",
-              "id" : "Q3Other",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q3Not sure",
               "name" : "3"
             }
           ]
@@ -105,10 +105,178 @@
             },
             {
               "type" : "radio",
-              "value" : "Other",
-              "label" : "Other",
-              "id" : "Q4Other",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q4Not sure",
               "name" : "4"
+            }
+          ]
+        },
+        {
+          "name" : "5",
+          "label" : "Do you like Redbull?",
+          "answer" : "Not sure",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q5Yes",
+              "name" : "5"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q5No",
+              "name" : "5"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q5Not sure",
+              "name" : "5"
+            }
+          ]
+        },
+        {
+          "name" : "6",
+          "label" : "Do you like water?",
+          "answer" : "yes",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q6Yes",
+              "name" : "6"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q6No",
+              "name" : "6"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q6Not sure",
+              "name" : "6"
+            }
+          ]
+        },
+        {
+          "name" : "7",
+          "label" : "Do you like lemons?",
+          "answer" : "no",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q7Yes",
+              "name" : "7"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q7No",
+              "name" : "7"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q7Not sure",
+              "name" : "7"
+            }
+          ]
+        },
+        {
+          "name" : "8",
+          "label" : "Do you like oranges?",
+          "answer" : "no",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q8Yes",
+              "name" : "8"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q8No",
+              "name" : "8"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q8Not sure",
+              "name" : "8"
+            }
+          ]
+        },
+        {
+          "name" : "9",
+          "label" : "Do you like pears?",
+          "answer" : "Not sure",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q9Yes",
+              "name" : "9"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q9No",
+              "name" : "9"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q9Not sure",
+              "name" : "9"
+            }
+          ]
+        },
+        {
+          "name" : "10",
+          "label" : "Do you like apples?",
+          "answer" : "no",
+          "options" : [
+                 {
+              "type" : "radio",
+              "value" : "yes",
+              "label" : "Yes",
+              "id" : "Q10Yes",
+              "name" : "10"
+            },
+            {
+              "type" : "radio",
+              "value" : "no",
+              "label" : "No",
+              "id" : "Q10No",
+              "name" : "10"
+            },
+            {
+              "type" : "radio",
+              "value" : "Not sure",
+              "label" : "Not sure",
+              "id" : "Q10Not sure",
+              "name" : "10"
             }
           ]
         }
