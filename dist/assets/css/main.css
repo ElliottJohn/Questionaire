@@ -870,6 +870,13 @@ html {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
+html {
+  height: 100%; }
+
+.container {
+  min-height: 100%;
+  position: relative; }
+
 .header {
   color: white;
   font-size: 200%;
@@ -878,7 +885,7 @@ html {
   text-align: left;
   margin: auto;
   padding-left: 24px;
-  background-color: grey;
+  background-color: #0d83aa;
   line-height: 100px; }
 
 .header_img {
@@ -888,23 +895,37 @@ html {
   margin-top: 12px;
   margin-right: 24px; }
 
-.questions {
-  margin: 0 auto;
+.footer {
+  color: white;
+  font-size: 75%;
+  font-weight: bold;
+  height: 60px;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #0d83aa;
   padding: 24px;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+
+.questions {
+  margin: auto;
+  margin-bottom: 24px;
+  padding: 0 150px;
   text-align: center;
   font-weight: bold;
   font-size: 100%;
   overflow-y: scroll;
-  height: 600px;
+  height: 650px;
   max-width: 800px; }
   .questions p {
-    border-top: solid;
+    border-top: dashed;
     border-width: 2px;
     padding: 24px;
     padding-bottom: 0px; }
 
 .form {
-  margin: 24px;
+  margin: 0 48px 24px;
   padding: 24px;
   text-align: center;
   font-weight: bold;
@@ -918,12 +939,14 @@ html {
     border-radius: 5px; }
 
 .results {
+  overflow-y: scroll;
   margin: auto;
-  padding: 24px;
+  padding: 0 150px;
   text-align: center;
   font-weight: bold;
   font-size: 100%;
-  max-width: 800px; }
+  max-width: 800px;
+  height: 700px; }
   .results p {
     padding: 24px;
     padding-bottom: 0px; }
@@ -931,7 +954,7 @@ html {
     text-align: center; }
   .results h3 {
     padding: 24px;
-    border-top: solid;
+    border-top: dashed;
     border-width: 2px; }
 
 .gradient {
@@ -942,8 +965,18 @@ html {
   margin: 24px;
   border-style: solid; }
 
-.my-new-list {
-  text-align: center; }
+.buttons {
+  padding-top: 24px;
+  text-align: center;
+  font-weight: bold; }
+  .buttons button[type=button] {
+    padding: 5px 15px;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float: middle; }
 
 .font_question {
   font-size: 30px;

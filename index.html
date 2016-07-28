@@ -1,6 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
 <html class="gradient" lang=en>
@@ -8,19 +7,26 @@
         <title>Questionaire</title>
         <link rel="stylesheet" type="text/css" href="dist/assets/css/main.css">
         <script type="text/javascript">
+
             localStorage.clear();
             var session = {
-              'SubmittedAnswers': []
+                'SubmittedAnswers': []
             };
-            function loadAnswers()
+
+            function back_button()
             { 
-                document.write(localStorage.session);
+                session.SubmittedAnswers.length = 0;
+                $( ".remove" ).remove();
+                $("ul").hide(500);
+                $("#back_btn").hide(500);
+                $("form").show(500);
 
             }
 
             $(function() 
             {
                 $("ul").hide();
+                $("#back_btn").hide();
                 $.getJSON('/dist/jquery/data.json', function(data) 
                 {
                     for (i=0; i < data.question.length; i++)
@@ -36,67 +42,75 @@
                             $(".js-form").append(options.options[n]); 
                             $("input[type=radio]").addClass("radio_btn");
                             $("input[type=radio]").attr("required", true);
-                        }  
-
+                        }
                     }
-                    $("input[type=radio]").on("click", function() 
-                    {
-                        session.SubmittedAnswers.push({ 'Question': $(this).attr("name"), 'answer': $(this).attr("value")});
-                    });
                 });
-
-            
 
             });
 
             function loadResults()
             {
-            var retrievedAnswers = localStorage.getItem('session');
-            var UserAnswers = JSON.parse(retrievedAnswers);
+
+                $(".radio_btn:checked").each(function(){
+                    session.SubmittedAnswers.push($(this).val());
+                });
 
                 $.getJSON('/dist/jquery/data.json', function(data) 
                 {
                     for (i=0; i < data.question.length; i++)
                     {
-                        var results = "<h3>" + data.question[i].label + " <p> Your answer was '" + UserAnswers.SubmittedAnswers[i].answer + "' the correct answer was '" + data.question[i].answer + "'. </p>";
+                        var notsure;
+                        if(session.SubmittedAnswers[i] == "NS")
+                        {
+                            notsure = "Not sure";
+                        }
+                        else
+                        {
+                            notsure = session.SubmittedAnswers[i];
+                        }
+                           // console.log(data.question[i].answer);
+
+                        var results = "<h3 class='remove'>" + data.question[i].label + "</h3> <p class='remove'> Your answer was '" + notsure + "' the correct answer was '" + data.question[i].answer + "'. </p>";
                         $(".js-results").append(results);   
                     }
-                    
                 });
 
-                $("form").hide("fade");
+                $("form").hide(500);
                 $("ul").show(500);
-                $("ul").effect("highlight");
-
+                $("#back_btn").show(500);
             };
 
         </script>
-
     </head>
-    <body>
-        <header>
-            <img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
-            <h1 class="header" id="title">Questionaire</h1>
-        </header>
 
-        <section>   
-        </section>
+    <div class="container">
 
-        <form class="form" action="javascript:loadResults();">
-            <div class="js-form questions">
+        <body>
+            <header>
+                <img class="header_img" src="dist/assets/images/cohaesus.png" alt="logo" />
+                <h1 class="header" id="title">Questionaire</h1>
+            </header>
+
+            <section>   
+            </section>
+
+            <form class="form" action="javascript:loadResults();">
+                <div class="js-form questions">
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
+            <ul class="results">
+                <div class="js-results">
+                    <h1> Results </h1>
+                </div>
+            </ul>
+            <div class="buttons" id="buttons">
+                <button id="back_btn" type="button" onClick="javascript:back_button();"> Back </button>
             </div>
-            <input type="submit" value="Submit" onClick="localStorage.setItem('session', JSON.stringify(session));">
-        </form>
-
-
-        <ul>
-            <div class="js-results results">
-                <h1> Results </h1>
-            </div>
-        </ul>
-
-
-    </body>
-
-
+            <footer class="footer">
+                Cohaesus
+            </footer>
+        </body>
+    </div>
 </html>

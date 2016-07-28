@@ -1,3 +1,12 @@
+html{
+	height:100%;
+}
+
+.container {
+	min-height:100%;
+	position:relative;
+}
+
 .header {
 	color: white;
 	font-size: 200%;
@@ -6,62 +15,78 @@
 	text-align: left;
 	margin: auto;
 	padding-left: $inuit-padding;
-	background-color: grey;
+	background-color: #0d83aa;
 	line-height: 100px;
 }
 
 .header_img {
-    float: right;
-  	width: 200px;
-  	height: 75px;
-    margin-top: $inuit-margin--small;
-  	margin-right: $inuit-margin;
-  }
+	float: right;
+	width: 200px;
+	height: 75px;
+	margin-top: $inuit-margin--small;
+	margin-right: $inuit-margin;
+}
 
+.footer {
+	color: white;
+	font-size: 75%;
+	font-weight: bold;
+	height: 60px;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #0d83aa;
+	padding: $inuit-padding;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+
+}
 
 .questions {
-	margin: 0 auto;
-	padding: $inuit-padding;
+	margin: auto;
+	margin-bottom: $inuit-margin;
+	padding: 0 150px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 100%;
 	overflow-y: scroll;
-	height: 600px;
+	height: 650px;
 	max-width: 800px;
 
 	p{
-		border-top	: solid;
+		border-top	: dashed;
 		border-width: 2px;
 		padding: $inuit-padding;
 		padding-bottom: 0px;
-
 	}
 }
 
 .form {
-	margin: $inuit-margin;
+	margin: 0 $inuit-margin--large $inuit-margin;
 	padding: $inuit-padding;
 	text-align: center;
 	font-weight: bold;
 	font-size: 100%;
+
 	input[type=submit] {
-	    padding:5px 15px; 
-	    background:#ccc; 
-	    border:0 none;
-	    cursor:pointer;
-	    -webkit-border-radius: 5px;
-	    border-radius: 5px; 
+		padding:5px 15px; 
+		background:#ccc; 
+		border:0 none;
+		cursor:pointer;
+		-webkit-border-radius: 5px;
+		border-radius: 5px; 
 	}
 }
 
 .results {
-	margin: auto;
-	padding: $inuit-padding;
-	text-align: center;
-	font-weight: bold;
-	font-size: 100%;
-	max-width: 800px;
-
+		overflow-y: scroll;
+		margin: auto;
+		padding: 0 150px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 100%;
+		max-width: 800px;
+		height: 700px;
 	p{
 		padding: $inuit-padding;
 		padding-bottom: 0px;
@@ -70,9 +95,10 @@
 	h1{
 		text-align: center;
 	}
+
 	h3{
 		padding: $inuit-padding;
-		border-top	: solid;
+		border-top	: dashed;
 		border-width: 2px;
 	}
 }
@@ -83,13 +109,23 @@
 
 }
 
-
 .radio_btn {
 	margin: $inuit-margin;
 	border-style: solid;
 }
 
-.my-new-list {
+.buttons {
+	padding-top: $inuit-padding;
 	text-align: center;
+	font-weight: bold;
 
+	button[type=button]{
+		padding:5px 15px; 
+		background:#ccc; 
+		border:0 none;
+		cursor:pointer;
+		-webkit-border-radius: 5px;
+		border-radius: 5px; 
+		float: middle;
+	}
 }
