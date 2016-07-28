@@ -3,25 +3,25 @@
        {
           "name" : "1",
           "label" : "Do you like tea?",
-          "answer" : "yes",
+          "answer" : "Yes",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q1Yes",
               "name" : "1"  
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q1No",
               "name" : "1"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q1Not sure",
               "name" : "1"
@@ -31,25 +31,25 @@
         {
           "name" : "2",
           "label" : "Do you like cofee?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q2Yes",
               "name" : "2"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q2No",
               "name" : "2"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q2Not sure",
               "name" : "2"
@@ -59,25 +59,25 @@
         {
           "name" : "3",
           "label" : "Do you like Cola?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q3Yes",
               "name" : "3"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q3No",
               "name" : "3"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q3Not sure",
               "name" : "3"
@@ -87,25 +87,25 @@
         {
           "name" : "4",
           "label" : "Do you like Fanta?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q4Yes",
               "name" : "4"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q4No",
               "name" : "4"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q4Not sure",
               "name" : "4"
@@ -119,21 +119,21 @@
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q5Yes",
               "name" : "5"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q5No",
               "name" : "5"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q5Not sure",
               "name" : "5"
@@ -143,25 +143,25 @@
         {
           "name" : "6",
           "label" : "Do you like water?",
-          "answer" : "yes",
+          "answer" : "Yes",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q6Yes",
               "name" : "6"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q6No",
               "name" : "6"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q6Not sure",
               "name" : "6"
@@ -171,25 +171,25 @@
         {
           "name" : "7",
           "label" : "Do you like lemons?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q7Yes",
               "name" : "7"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q7No",
               "name" : "7"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q7Not sure",
               "name" : "7"
@@ -199,25 +199,25 @@
         {
           "name" : "8",
           "label" : "Do you like oranges?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q8Yes",
               "name" : "8"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q8No",
               "name" : "8"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q8Not sure",
               "name" : "8"
@@ -231,21 +231,21 @@
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q9Yes",
               "name" : "9"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q9No",
               "name" : "9"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q9Not sure",
               "name" : "9"
@@ -255,25 +255,25 @@
         {
           "name" : "10",
           "label" : "Do you like apples?",
-          "answer" : "no",
+          "answer" : "No",
           "options" : [
             {
               "type" : "radio",
-              "value" : "yes",
+              "value" : "Yes",
               "label" : "Yes",
               "id" : "Q10Yes",
               "name" : "10"
             },
             {
               "type" : "radio",
-              "value" : "no",
+              "value" : "No",
               "label" : "No",
               "id" : "Q10No",
               "name" : "10"
             },
             {
               "type" : "radio",
-              "value" : "NS",
+              "value" : "Not_sure",
               "label" : "Not sure",
               "id" : "Q10Not sure",
               "name" : "10"

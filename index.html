@@ -1,5 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/assets/js/app.js"></script>
 
 
 <html class="gradient" lang=en>
@@ -59,18 +60,7 @@
                 {
                     for (i=0; i < data.question.length; i++)
                     {
-                        var notsure;
-                        if(session.SubmittedAnswers[i] == "NS")
-                        {
-                            notsure = "Not sure";
-                        }
-                        else
-                        {
-                            notsure = session.SubmittedAnswers[i];
-                        }
-                           // console.log(data.question[i].answer);
-
-                        var results = "<h3 class='remove'>" + data.question[i].label + "</h3> <p class='remove'> Your answer was '" + notsure + "' the correct answer was '" + data.question[i].answer + "'. </p>";
+                        var results = "<h3 class='remove'>" + data.question[i].label + "</h3> <p class='remove'> Your answer was '" + session.SubmittedAnswers[i].replace(/_/g, ' ') + "' the correct answer was '" + data.question[i].answer + "'. </p>";
                         $(".js-results").append(results);   
                     }
                 });
