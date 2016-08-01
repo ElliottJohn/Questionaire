@@ -1,9 +1,17 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var browserify = require('gulp-browserify');
-var gutil = require('gulp-util');
-var rename = require('gulp-rename');
+var jslint = require('gulp-jslint-simple');
 
+gulp.task('lint', function () {
+    gulp.src('./src/js/source.js')
+        .pipe(jslint.run({
+            node: true,
+            vars: true
+        }))
+        .pipe(jslint.report({
+            reporter: require('jshint-stylish').reporter
+        }));
+});
 
 gulp.task('styles', function() {
     gulp.src('./src/sass/main.scss')
@@ -11,24 +19,16 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./dist/assets/css'))
 });
 
-gulp.task('js', function() {
-	return browserify('./src/js/on_load.js')
-	.bundle()
-	.on('error', function(e) {
-		gutil.log(e);
-	})
-	.pipe(source('bundle.js'))
-	.pipe(gulp.dest('./dist/js'))
-});
 
 //Watch task
 gulp.task('default',function() {
     gulp.watch('src/**/*.scss',['styles']);
+    gulp.watch('src/**/*.js',['lint']);
 });
 
 
-// browserify
-// scss-lint
-// js-hint
-// watch
-// git hooks (precommit in grunt)
+ //js Lint D
+ //json inputs, answers correct
+ //split questions
+ //move JS to design pattern D
+ //style conventions

@@ -19,4 +19,4 @@ function on_load()
                             $("input[type=radio]").attr("required", true);
                         }
                     }
-                });
+                }); 

@@ -910,23 +910,25 @@ html {
 
 .questions {
   margin: auto;
+  margin-top: 24px;
   margin-bottom: 24px;
   padding: 0 150px;
   text-align: center;
   font-weight: bold;
   font-size: 100%;
   overflow-y: scroll;
-  height: 650px;
+  height: 600px;
   max-width: 800px; }
   .questions p {
     border-top: dashed;
     border-width: 2px;
     padding: 24px;
     padding-bottom: 0px; }
+  .questions h1 {
+    text-align: center; }
 
 .form {
   margin: 0 48px 24px;
-  padding: 24px;
   text-align: center;
   font-weight: bold;
   font-size: 100%; }
@@ -940,6 +942,7 @@ html {
 
 .results {
   overflow-y: scroll;
+  margin-bottom: 24px;
   margin: auto;
   padding: 0 150px;
   text-align: center;
@@ -954,6 +957,7 @@ html {
     text-align: center; }
   .results h3 {
     padding: 24px;
+    padding-bottom: 0px;
     border-top: dashed;
     border-width: 2px; }
 
